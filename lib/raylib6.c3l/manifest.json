@@ -1,0 +1,90 @@
+{
+  "provides": "raylib6",
+  "targets": {
+	"android-aarch64": {
+		"link-args" : ["--wrap=fopen", "--whole-archive", "lib/raylib6.c3l/android-aarch64/libraylib.a", "--no-whole-archive"],
+		"dependencies" : [],
+		"linked-libraries": ["EGL", "GLESv2", "android", "log", "OpenSLES", "m", "c++_shared"],
+	},
+	"macos-x64": {
+	  "link-args": [],
+	  "dependencies": [],
+	  "linked-libraries": [
+		"raylib",
+		"raygui",
+		"Cocoa.framework",
+		"OpenGL.framework",
+		"CoreVideo.framework",
+		"GLUT.framework",
+		"IOKit.framework"
+	  ]
+	},
+	"macos-aarch64": {
+	  "link-args": [],
+	  "dependencies": [],
+	  "linked-libraries": [
+		"raylib",
+		"raygui",
+		"Cocoa.framework",
+		"OpenGL.framework",
+		"CoreVideo.framework",
+		"GLUT.framework",
+		"IOKit.framework"
+	  ]
+	},
+	"linux-x64": {
+	  "link-args": [],
+	  "dependencies": [],
+	  "linked-libraries": [
+		"raylib",
+		"raygui",
+		"X11",
+		"Xrandr",
+		"Xinerama",
+		"Xi",
+		"Xxf86vm",
+		"Xcursor",
+		"m"
+	  ]
+	},
+	"linux-aarch64": {
+	  "link-args": [],
+	  "dependencies": [],
+	  "linked-libraries": [
+		"raylib",
+		"raygui",
+		"X11",
+		"Xrandr",
+		"Xinerama",
+		"Xi",
+		"Xxf86vm",
+		"Xcursor",
+		"m"
+	  ]
+	},
+	"freebsd-x64": {
+	  "link-args": [],
+	  "dependencies": [],
+	  "linked-libraries": [
+		"raylib",
+		"raygui",
+		"m"
+	  ]
+	},
+	"windows-x64": {
+	  "linked-libraries": [
+		"raylib",
+		"raygui",
+		"gdi32",
+		"winmm"
+	  ],
+	  "wincrt": "none"
+	},
+	"wasm32": {
+	  "linked-libraries": [
+		"raylib",
+		"raygui"
+	  ]
+	}
+  }
+}
